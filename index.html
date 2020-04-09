@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Jude moon">
+    <title>Visualización de la relación del PIB de un país y el acceso a Internet</title>
+
+    <style>
+        h1 {
+            background-color: black;
+            color: floralwhite;
+            font-family: Helvetica, sans-serif;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            padding-top: 30px;
+        }
+        h2 {
+            font-size: 1.4em;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            color: #000;
+            margin-top: 0;
+        }
+        h3 {
+            font-family: Helvetica, sans-serif;
+            text-align: center;
+        }
+        h4 {
+            font-family: Helvetica, sans-serif;
+            text-align: left;
+        }
+        div.text {
+            font-family: Helvetica;
+            padding: 5px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Relación del PIB de un país y el acceso a Internet</h1>
+
+    <h4 class="main-autor">Nombre: Joseba Menoyo Larrazabal</h4>
+
+    <h4 class="main-url">Url: <a href="https://js-ax2vfd-trab-final.stackblitz.io">https://js-ax2vfd-trab-final.stackblitz.io/</a></h4>
+
+    <h4 class="main-fuente">Fuentes: <br><a href="https://datos.bancomundial.org/">https://datos.bancomundial.org/</a></h4>
+    <div class="text">Se han utilizado diversas fuentes de datos disponibles en ese repositorio. Las principales han sido las siguientes:
+    <ul>
+    <li>Personas que usan Internet (% de la población): <a href="https://datos.bancomundial.org/indicador/IT.NET.USER.ZS">https://datos.bancomundial.org/indicador/IT.NET.USER.ZS</a>
+    <li>PIB (US$ a precios actuales): <a href="https://datos.bancomundial.org/indicador/NY.GDP.MKTP.CD?most_recent_value_desc=true">https://datos.bancomundial.org/indicador/NY.GDP.MKTP.CD?most_recent_value_desc=true</a>
+    <li>PIB per cápita, PPA ($ a precios internacionales actuales): <a href="https://datos.bancomundial.org/indicator/NY.GDP.PCAP.PP.CD?name_desc=true&view=map">https://datos.bancomundial.org/indicator/NY.GDP.PCAP.PP.CD?name_desc=true&view=map</a>
+    </ul>
+    Nota: este repositorio tiene los datos actualizados hasta 2018, por lo que el análisis no se ha podido realizar con valores actualizados a 2020.
+    </div>
+
+    <h4 class="main-fecha">Fecha: 08/04/2020</h4>
+    <br>
+    <br>
+
+    <div class="summary">
+        <h2 class="text-title">Resumen</h2>
+        <div class="text">
+          El objetivo de este proyecto es mostrar mediante diversas visualizaciones la posible relación entre el PIB (Producto Interiro Bruto) de un país y el acceso a Internet que tienen sus habitantes.<br><br>
+          Lo que me gustaría contrastar con este análisis es que realmente existe una relación directa entre el nivel de riqueza de un país y el acceso a Internet de sus habitantes.<br> <br>
+          La audiencia sería el público en general, con el objetivo de realizar un trabajo práctico de visualización aplicando algunas de las técnicas y herramientas aprendidas durante la asignatura “07-MBIG Visualización de Datos”.<br> <br>
+          Las herramientas utilizadas en este trabajo han sido las siguientes:
+          <ul>
+          <li>Stackblitz
+          <li>Datawrapper
+          <li>imgbb
+          <li>Python con Google Colab
+          <li>Google Spreadsheet
+          </ul>
+          <br>
+          Es de esperar que los países más ricos tengan un mayor acceso a Internet entre sus habitantes que en los países pobres. Pero lo que realmente se quiere verificar es si lo que entendemos como los países más ricos del mundo son los que realmente tienen un índice de conectividad a Internet más alto que el resto.<br><br>
+          Seguramente, al pensar en los países con mayor conectividad a Internet, a cualquiera le podrían venir a la cabeza en primer lugar los países más ricos, los que tienen un índice de industrialización más elevado. Generalmente pensaríamos en los países que forman el G7 (o incluso el G20). Países tecnológicamente avanzados, como: Japón, Alemania, EEUU, Canadá, Francia…<br><br>
+          Para contrastar esto se ha utilizado la fuente de datos de <a href="https://www.bancomundial.org/">https://www.bancomundial.org/</a>, la cual proporciona el porcentaje de personas de un país que usan Internet (entendiéndose por uso el que se hallan conectado por lo menos una vez en los últimos 3 meses por medio de cualquier tipo de dispositivo: PC, Smartphone, TV, gaming, asistente digital…).<br><br>
+          A continuación se muestra el desarrollo de las diferentes visualizaciones realizadas:<br>
+        </div>
+    </div>
+    <h2 class="text-title">¿Qué países crees que tendrán los porcentajes de conexión a Internet más altos?</h2>
+    <div class="text">
+      Ésta sería una pregunta para captar el interés de la audiencia. <br><br>
+      A modo de ejercicio, acompañamos la pregunta con una nube de palabras, que nos indica mediante el tamaño de la letra cuan alto es el porcentaje de conexión a Internet de sus habitantes (se ha asociado el tamaño de letra a una variable cuantitativa):<br><br>
+      <img src="https://i.ibb.co/ckhLG0t/wordcloud.png" alt="wordcloud" border="0" width="100%" height="100%"><br><br>
+      ¿Son los países que esperabas? ¿Eres capaz de identificar en esa nube de palabras los países que inicialmente considerabas que podían tener los índices más altos de conectividad?<br><br>
+      Una nube de puntos no es adecuada para una representación con exactitud de los valores que estamos analizando. Es difícil identificar el orden de los países, e imposible saber de qué porcentajes de conexión a Internet estaríamos hablando.<br><br>
+      Para eso, a continuación se mostrarán otra serie de gráficos que nos dan una idea más precisa de esos ratios de conectividad, ayudándonos a analizarlo en mayor detalle. Pero se ha pensado que una introducción con este tipo de gráfico más “estético”, acompañado de la pregunta previa para que la audiencia reflexione sobre el tema antes de mostrar cualquier dato, serviría para captar su atención.<br><br>
+      Este gráfico ha sido generado con Python y subido mediante imgbb. El código está disponible en el siguiente cuaderno de Google Colab: <a href="https://colab.research.google.com/drive/1xDkoXiP9TamgsqI0hUcDQ2Es8CZAPp1N">https://colab.research.google.com/drive/1xDkoXiP9TamgsqI0hUcDQ2Es8CZAPp1N</a>
+    </div>
+    
+    <h2 class="text-title">Visión general del mundo</h2>
+    <div class="text">
+      A continuación se muestra un mapa coroplético el cual sombrea cada país con distintos colores de la misma gama cromática, representando los distintos valores del porcentaje de conexión a Internet para cada país. Este gráfico se ha creado con Datawrapper.<br><br>
+      <iframe title="Porcentaje de personas conectadas a Internet " aria-label="World choropleth map" src="//datawrapper.dwcdn.net/VqXef/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400"></iframe>
+      <br>
+      Este gráfico seguramente vaya más acorde a la idea general que pudiese tener la audiencia cuando se ha lanzado la pregunta de qué países tendrán los porcentajes de conexión más altos entre sus habitantes.
+      <br><br>
+      Se observa que EEUU, Europa (sobre todo países del norte), Australia, Japón... son los que tienen los tonos más oscuros, indicando un mayor porcentage de gente conectada a Internet. <br><br>
+      Por otro lado, África es claramente la parte del mundo con los índices más bajos de conectividad a Internet.<br><br> 
+      Sin embargo, este mapa nos da solamente una idea aproximada:
+      <ul>
+          <li>Indica valores dentro de unos rangos bastante grandes (de un 20%), por lo que no nos permite saber realmente cuales son los países top, las diferencias entre ellos, etc.
+          <li>Además, aunque el gráfico sea interactivo y nos permita ir haciendo zoom a diferentes zonas del mundo, nos exigiría ir navegando por el mapa para ver los países con menor superficie (que como ya hemos visto en la nube de palabras, pueden ser algunos de los más relevantes). 
+      </ul>
+      Es por ellos que vamos a intentar hacer un análisis un poco más a detalle. <br> 
+    </div>  
+
+    <h2 class="text-title">Análisis por país</h2>
+    <div class="text">
+      Tal y como hemos visto en la asignatura, a la hora de comparar las propiedades de posición y longitud son las que mayor precisión proporcionan en una visualización. Es por ello que para un análisis más detallado lo lógico sería optar por un gráfico de barras o columnas.<br><br>
+      El siguiente gráfico en formato tabla nos permite analizar en detalle los datos de todos los países de la forma que queramos:
+      <ul>
+          <li>Aparecen por defecto los países ordenados de mayor a menor porcentaje de habitantes que se conectan a Internet.
+          <li>Sería inmanejable tratar de mostrar al mismo tiempo los más de 200 países, por lo que el grafico permite desplazarse por diferentes páginas, o utilizar un buscador para seleccionar el país que se desea observar (indicándonos su porcentaje, así como el ranking en el que se encuentra). 
+      </ul>
+      <iframe title="Porcentaje de personas conectadas a Internet " aria-label="Table" src="//datawrapper.dwcdn.net/Hfyec/3/" scrolling="no" frameborder="0" style="border: none;" width="628" height="565"></iframe>
+    </div> 
+
+    <h2 class="text-title">¿Existe relación con el PIB?</h2>
+    <div class="text">
+      La diferencia en PIB entre países puede ser abismal, por lo que para hacer una visualización más simplificada el siguiente gráfico de columnas creado con Google Spreadsheet muestra únicamente los 20 países del mundo con mayor PIB. En el mismo gráfico, la línea azul representa el porcentaje de habitantes conectados a Internet.<br><br>
+      <iframe width="785.5" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTuEaC18lTis8IBFEbVSsd3e-nFG8kCzf1JAA5cBaPDbQy-UOEhZZINXMysM4Hmt1-nf8N3KftW97LZ/pubchart?oid=1773060252&amp;format=interactive"></iframe>
+      <br>
+      Se observa que en estos 20 países no se da una relación directa entre PIB y conectividad a Internet. Tiene sentido, ya que países muy grandes como pueden ser China o India, a pesar de tener PIB muy elevados en comparación a otros países más pequeños, sus habitantes por lo general no tienen un nivel de vida alto.<br><br>
+      Es por ello que es necesario darle una vuelta al planteamiento, para un buscar un factor que realmente pueda indicar el nivel de vida de los habitantes de un país de forma más precisa. <br><br>
+      Para ello tenemos el PIB-PPA per cápita (Producto Interior Bruto a valores de Paridad de Poder Adquisitivo per cápita), que representa la suma de todos los bienes y servicios finales producidos por un país en un año, dividido por la población estimada para mediados del mismo año. <br><br>
+      Utilizando esta métrica, sí es de esperar que la relación con el porcentaje de habitantes conectados a Internet sea más evidente con una correlación positiva. Esto se puede ver en el siguiente gráfico de dispersión:<br><br>
+      <iframe title="Gr&aacute;fico dispersi&oacute;n. PIB PPA vs. conectividad a Internet" aria-label="Scatter Plot" src="//datawrapper.dwcdn.net/kyAH6/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400"></iframe>
+      <br><br>
+      Para mostrarlo en mayor detalle, se repite el gráfico mostrado anteriormente para los 20 países con mayor PIB, pero en este caso con los que tienen el mayor PIB-PPA per cápita. En lugar de 20, se ha optado por mostrar 150 países para que se aprecie algo más la evolución del porcentaje de habitantes conectados a Internet, que si da la sensación de ir disminuyendo ligeramente a medida que baja el PIB-PPA):
+      <br>
+      <iframe width="890" height="472" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTuEaC18lTis8IBFEbVSsd3e-nFG8kCzf1JAA5cBaPDbQy-UOEhZZINXMysM4Hmt1-nf8N3KftW97LZ/pubchart?oid=1753232614&amp;format=interactive"></iframe>
+
+    </div>
+
+  </body>
+</html>
