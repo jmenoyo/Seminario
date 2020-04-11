@@ -77,9 +77,9 @@
           <li>Google Spreadsheet
           </ul>
           <br>
-          Es de esperar que los países más ricos tengan un mayor acceso a Internet entre sus habitantes que en los países pobres. Pero lo que realmente se quiere verificar es si lo que entendemos como los países más ricos del mundo son los que realmente tienen un índice de conectividad a Internet más alto que el resto.<br><br>
+          Es de esperar que los países más ricos tengan un mayor acceso a Internet entre sus habitantes en comparación con los países más pobres. Pero lo que realmente se quiere verificar es si lo que entendemos como los países más ricos del mundo son los que realmente tienen un índice de conectividad a Internet más alto que el resto.<br><br>
           Seguramente, al pensar en los países con mayor conectividad a Internet, a cualquiera le podrían venir a la cabeza en primer lugar los países más ricos, los que tienen un índice de industrialización más elevado. Generalmente pensaríamos en los países que forman el G7 (o incluso el G20). Países tecnológicamente avanzados, como: Japón, Alemania, EEUU, Canadá, Francia…<br><br>
-          Para contrastar esto se ha utilizado la fuente de datos de <a href="https://www.bancomundial.org/">https://www.bancomundial.org/</a>, la cual proporciona el porcentaje de personas de un país que usan Internet (entendiéndose por uso el que se hallan conectado por lo menos una vez en los últimos 3 meses por medio de cualquier tipo de dispositivo: PC, Smartphone, TV, gaming, asistente digital…).<br><br>
+          Para contrastar esto se ha utilizado la fuente de datos de <a href="https://www.bancomundial.org/">https://www.bancomundial.org/</a>, la cual proporciona el porcentaje de personas de un país que usan Internet (entendiéndose por "uso", el hecho de que se conecten por lo menos una vez en los últimos 3 meses por medio de cualquier tipo de dispositivo: PC, Smartphone, TV, gaming, asistente digital…).<br><br>
           A continuación se muestra el desarrollo de las diferentes visualizaciones realizadas:<br>
         </div>
     </div>
@@ -96,7 +96,7 @@
     
     <h2 class="text-title">Visión general del mundo</h2>
     <div class="text">
-      A continuación se muestra un mapa coroplético el cual sombrea cada país con distintos colores de la misma gama cromática, representando los distintos valores del porcentaje de conexión a Internet para cada país. Este gráfico se ha creado con Datawrapper.<br><br>
+      A continuación se muestra un mapa coroplético, el cual sombrea cada país con distintos colores de la misma gama cromática, representando los distintos valores del porcentaje de conexión a Internet para cada país. Este gráfico se ha creado con Datawrapper.<br><br>
       <iframe title="Porcentaje de personas conectadas a Internet " aria-label="World choropleth map" src="//datawrapper.dwcdn.net/VqXef/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400"></iframe>
       <br>
       Este gráfico seguramente vaya más acorde a la idea general que pudiese tener la audiencia cuando se ha lanzado la pregunta de qué países tendrán los porcentajes de conexión más altos entre sus habitantes.
@@ -113,7 +113,7 @@
 
     <h2 class="text-title">Análisis por país</h2>
     <div class="text">
-      Tal y como hemos visto en la asignatura, a la hora de comparar las propiedades de posición y longitud son las que mayor precisión proporcionan en una visualización. Es por ello que para un análisis más detallado lo lógico sería optar por un gráfico de barras o columnas.<br><br>
+      Tal y como hemos visto en la asignatura, a la hora de comparar, las propiedades de posición y longitud son las que mayor precisión proporcionan en una visualización. Es por ello que para un análisis más detallado lo lógico sería optar por un gráfico de barras o columnas.<br><br>
       El siguiente gráfico en formato tabla nos permite analizar en detalle los datos de todos los países de la forma que queramos:
       <ul>
           <li>Aparecen por defecto los países ordenados de mayor a menor porcentaje de habitantes que se conectan a Internet.
@@ -127,13 +127,13 @@
       La diferencia en PIB entre países puede ser abismal, por lo que para hacer una visualización más simplificada el siguiente gráfico de columnas creado con Google Spreadsheet muestra únicamente los 20 países del mundo con mayor PIB. En el mismo gráfico, la línea azul representa el porcentaje de habitantes conectados a Internet.<br><br>
       <iframe width="785.5" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTuEaC18lTis8IBFEbVSsd3e-nFG8kCzf1JAA5cBaPDbQy-UOEhZZINXMysM4Hmt1-nf8N3KftW97LZ/pubchart?oid=1773060252&amp;format=interactive"></iframe>
       <br>
-      Se observa que en estos 20 países no se da una relación directa entre PIB y conectividad a Internet. Tiene sentido, ya que países muy grandes como pueden ser China o India, a pesar de tener PIB muy elevados en comparación a otros países más pequeños, sus habitantes por lo general no tienen un nivel de vida alto.<br><br>
+      Se observa que en estos 20 países no se da una relación directa entre PIB y conectividad a Internet. En parte tiene sentido, ya que países muy grandes como pueden ser China o India, a pesar de tener PIB muy elevados en comparación a otros países más pequeños, sus habitantes por lo general no tienen un nivel de vida alto.<br><br>
       Es por ello que es necesario darle una vuelta al planteamiento, para un buscar un factor que realmente pueda indicar el nivel de vida de los habitantes de un país de forma más precisa. <br><br>
       Para ello tenemos el PIB-PPA per cápita (Producto Interior Bruto a valores de Paridad de Poder Adquisitivo per cápita), que representa la suma de todos los bienes y servicios finales producidos por un país en un año, dividido por la población estimada para mediados del mismo año. <br><br>
       Utilizando esta métrica, sí es de esperar que la relación con el porcentaje de habitantes conectados a Internet sea más evidente con una correlación positiva. Esto se puede ver en el siguiente gráfico de dispersión:<br><br>
       <iframe title="Gr&aacute;fico dispersi&oacute;n. PIB PPA vs. conectividad a Internet" aria-label="Scatter Plot" src="//datawrapper.dwcdn.net/kyAH6/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400"></iframe>
       <br><br>
-      Para mostrarlo en mayor detalle, se repite el gráfico mostrado anteriormente para los 20 países con mayor PIB, pero en este caso con los que tienen el mayor PIB-PPA per cápita. En lugar de 20, se ha optado por mostrar 150 países para que se aprecie algo más la evolución del porcentaje de habitantes conectados a Internet (junto con sus líneas de tendencia), que sí da la sensación de ir disminuyendo ligeramente a medida que baja el PIB-PPA:
+      Para mostrarlo en mayor detalle, se repite el gráfico mostrado anteriormente para los 20 países con mayor PIB, pero en este caso con los que tienen el mayor PIB-PPA per cápita. En lugar de 20, se ha optado por mostrar 150 países para que se aprecie algo más la evolución del porcentaje de habitantes conectados a Internet (junto con sus líneas de tendencia), que sí da la sensación de ir disminuyendo progresivamente a medida que baja el PIB-PPA:
       <br>
       <iframe width="890" height="472" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTuEaC18lTis8IBFEbVSsd3e-nFG8kCzf1JAA5cBaPDbQy-UOEhZZINXMysM4Hmt1-nf8N3KftW97LZ/pubchart?oid=1753232614&amp;format=interactive"></iframe>
 
